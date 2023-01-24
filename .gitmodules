@@ -1,0 +1,3 @@
+[submodule "Projects/P0/git-java-setup"]
+	path = Projects/P0/git-java-setup
+	url = https://github.com/cmsc389T-spring23/git-java-setup.git
