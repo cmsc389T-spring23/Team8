@@ -10,11 +10,12 @@ repo, and pushing that repo to GitHub.
 
 On your command line,
 
-1. Create a directory for your repository and cd into it
+1. Create a directory for your repository, cd into it, and initialize it
 
 ```bash
 mkdir MyFirstRepo
 cd MyFirstRepo
+git init
 ```
 
 2. Create an empty file in your local workspace
