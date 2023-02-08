@@ -80,11 +80,11 @@ Each team member **must** also review another team member's pull requests for ea
 - Complete the pull request by merging changes
 
 
-Once this part has been completed, you should be able to see a JFrame appear that allows you to play Automonous PacMan by compiling and running your files. We will be using Gradle to build, run, and test code in this class:
+Once this part has been completed, you should be able to see a JFrame appear that allows you to play Automonous PacMan by compiling and running your files. If you don't have Gradle installed, follow the instructions [here](https://gradle.org/install/). We will be using Gradle to build, run, and test code in this class:
 
 ```bash
-./gradlew build
-./gradlew run
+gradle build
+gradle run
 ```
 
 - **build** - compiles all source and test code
@@ -126,15 +126,15 @@ PacMan pacman = frame.addPacMan(new Location(x, y)); //Creates PacMan at locatio
 To compile and run all tests, run the following lines from the project directory in your command line:
 
 ```bash
-./gradlew build
-./gradlew test --parallel
+gradle build
+gradle test --parallel
 ```
 
 To compile and run onlt 1 test run the following lines from the project directory in your command line:
 ```bash
-./gradlew build
-./gradlew test --parallel --tests YourTestClass
-ex: ./gradlew test --parallel --tests TestGhostAttack
+gradle build
+gradle test --parallel --tests YourTestClass
+ex: gradle test --parallel --tests TestGhostAttack
 ```
 
 ### README Notes
