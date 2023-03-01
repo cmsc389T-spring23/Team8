@@ -1,6 +1,7 @@
 # cmsc389T-spring23
 
-
+Team8 Pacman Project
+Aditya Krishnamoorthy, 
 
 
 
