@@ -22,6 +22,7 @@ public class Ghost {
   }
 
   public boolean is_pacman_in_range() {
+    // TODO
     return false;
   }
 
