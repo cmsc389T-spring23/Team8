@@ -60,7 +60,15 @@ public class Map {
 
   public HashSet<Type> getLoc(Location loc) {
     // wallSet and emptySet will help you write this method
-    return null;
+      if (!field.containsKey(loc)){
+	  if (loc.x<dim&&loc.y<dim){
+	      return emptySet;
+	  } else {
+	      return wallSet;
+	  }
+      } else {
+	  return field.get(loc);
+      }
   }
 
   public boolean attack(String Name) {
