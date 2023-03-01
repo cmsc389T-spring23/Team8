@@ -25,6 +25,7 @@ public class PacMan {
 
   public boolean is_ghost_in_range() {
     return false;
+    // TODO
   }
 
   public JComponent consume() {
