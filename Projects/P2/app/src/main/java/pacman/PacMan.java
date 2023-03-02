@@ -64,6 +64,21 @@ public class PacMan {
   }
 
   public boolean is_ghost_in_range() {
+    int x = this.myLoc.x;
+    int y = this.myLoc.y;
+
+    for(int i = -1; i < 2; i++) {
+        for(int j = -1; j < 2; j++) {
+            for(Map.Type type : myMap.getLoc(new Location(x + j, y + j))) {
+                if (type == Map.Type.GHOST) {
+                    if(i != 0 || j != 0) {
+                        return true;
+                    } 
+                }
+            }
+        }
+    }
+
     return false;
   }
 
