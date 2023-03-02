@@ -22,7 +22,21 @@ public class Ghost {
   }
 
   public boolean is_pacman_in_range() {
-    // TODO
+    int x = this.myLoc.x;
+    int y = this.myLoc.y;
+
+    for(int i = -1; i < 2; i++) {
+        for(int j = -1; j < 2; j++) {
+            for(Map.Type type : myMap.getLoc(new Location(x + j, y + j))) {
+                if (type == Map.Type.PACMAN) {
+                    if(i != 0 || j != 0) {
+                        return true;
+                    } 
+                }
+            }
+        }
+    }
+
     return false;
   }
 
