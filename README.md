@@ -10,10 +10,7 @@ Aditya Krishnamoorthy,
 ## Running the project
 <br />
 To run the project, from the P2 directory, call
-<br />
-``` gradle build <br /> 
-
-gradle run ``` <br />
+<br /> `gradle build' <br /> 'gradle run' <br />
 
 
 ### Map.getLoc() - Aditya Krishnamoorthy<br />
