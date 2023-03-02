@@ -55,6 +55,9 @@ public class Map {
   public boolean move(String name, Location loc, Type type) {
     // update locations, components, and field
     Location oldLoc = locations.get(name);
+    if(oldLoc == null){
+      return false;
+    }
     locations.remove(name);
     locations.put(name, loc);
 
@@ -67,7 +70,7 @@ public class Map {
     oldComp.setLocation(loc.x, loc.y);
     components.put(name, oldComp);
 
-    return false;
+    return true;
   }
 
   public HashSet<Type> getLoc(Location loc) {
