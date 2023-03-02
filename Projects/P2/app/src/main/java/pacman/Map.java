@@ -54,23 +54,50 @@ public class Map {
 
   public boolean move(String name, Location loc, Type type) {
     // update locations, components, and field
+    Location oldLoc = locations.get(name);
+    if(oldLoc == null){
+      return false;
+    }
+    locations.remove(name);
+    locations.put(name, loc);
+
+    field.get(loc).add(type);
+    field.get(oldLoc).remove(type);
+
+    JComponent oldComp = components.get(name);
+    components.remove(name);
     // use the setLocation method for the component to move it to the new location
-    return false;
+    oldComp.setLocation(loc.x, loc.y);
+    components.put(name, oldComp);
+
+    return true;
   }
 
   public HashSet<Type> getLoc(Location loc) {
     // wallSet and emptySet will help you write this method
-    return null;
+      if (!field.containsKey(loc)){
+	  if (loc.x<0||loc.y<0||loc.x>dim||loc.y>dim){
+	      return emptySet;
+	  } else {
+	      return wallSet;
+	  }
+      } else {
+	  return field.get(loc);
+      }
   }
 
   public boolean attack(String Name) {
-    // update gameOver
-    return false;
+    this.gameOver = true;
+    return true;
   }
 
   public JComponent eatCookie(String name) {
     // update locations, components, field, and cookies
     // the id for a cookie at (10, 1) is tok_x10_y1
-    return null;
+    Location cookieLoc = locations.get(name);
+    String cookieId = "tok_x" + cookieLoc.x + "_y" + cookieLoc.y;
+    field.get(cookieLoc).remove(Map.Type.COOKIE);
+    cookies++;
+    return components.get(cookieId);
   }
 }
