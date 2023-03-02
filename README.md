@@ -1,7 +1,7 @@
 # Team 8 Pacman Project cmsc389T-spring23
 
 
-Aditya Krishnamoorthy, 
+Aditya Krishnamoorthy, Nicholas Perry 
 
 
 
@@ -27,3 +27,13 @@ This implementation moves the ghost to the first element of the set of valid loc
 ### pacman.move() - Aditya Krishnamoorthy<br />
 Similar to map implementation - moves to first valid location in set of valid location. Returns false with same cases.
 Test puts pacman in a location on map where it can move, and checks if map.move is true.
+
+
+### Map.move() - Nicholas Perry<br />
+The method takes a name, location, and type and put the object specified by the name at the location. If the function is able to successfull move the object it returns true, otherwise it returns false. If the move is successful, the `field`, `locations`, and JComponent of the object are all be updated. The test verifies that the function returns true on a possible move. 
+
+### ghost.get_valid_moves() - Nicholas Perry<br />
+ This function returns an arraylist of possible locations that a ghost can move to from its current location. A ghost cannot move through walls, but they can move through other ghosts or a PacMan. The test verifies the number of available moves around a specified location.
+
+### pacman.get_valid_moves() - Nicholas Perry<br />
+ This function returns an arraylist of possible locations that a pacman can move to from its current location. A pacman cannot move through walls, but they can move through ghosts or another PacMan. The test verifies the number of available moves around a specified location.
