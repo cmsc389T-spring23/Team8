@@ -37,3 +37,14 @@ The method takes a name, location, and type and put the object specified by the 
 
 ### pacman.get_valid_moves() - Nicholas Perry<br />
  This function returns an arraylist of possible locations that a pacman can move to from its current location. A pacman cannot move through walls, but they can move through ghosts or another PacMan. The test verifies the number of available moves around a specified location.
+ 
+ 
+
+### Map.attack() - Rakrish Dhakal<br />
+This method updates the `gameOver` variable, so that wheen a ghost attacks PacMan, the game is finished.
+
+### ghost.is_pacman_in_range() - Rakrish Dhakal<br />
+This function checks for a ghost if PacMan is within a 1-unit radius of the ghost.
+
+### pacman.is_ghost_in_range() - Rakrish Dhakal<br />
+This function checks for PacMan if there is a ghost within a 1-unit radius of PacMan.
