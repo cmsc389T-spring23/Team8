@@ -17,7 +17,6 @@ public class Ghost {
 
   public ArrayList<Location> get_valid_moves() {
     ArrayList<Location> validLocations = new ArrayList<Location>();
-    return validLocations;
     //left
     Location leftLoc = new Location ((myLoc.x - 1), myLoc.y);
     HashSet<Map.Type> left = myMap.getLoc(leftLoc);
@@ -53,7 +52,8 @@ public class Ghost {
       validLocations.add(downLoc);
     }
 
-    return validLocations;
+    ArrayList<Location> validSLocations = new ArrayList<Location>();
+    return validSLocations;
   }
 
   public boolean move() {
