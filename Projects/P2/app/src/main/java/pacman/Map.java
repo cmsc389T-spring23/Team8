@@ -74,7 +74,6 @@ public class Map {
   }
 
   public HashSet<Type> getLoc(Location loc) {
-    return null;
     // wallSet and emptySet will help you write this method
     if (!field.containsKey(loc)){
       if (loc.x<0||loc.y<0||loc.x>dim||loc.y>dim){
@@ -83,7 +82,7 @@ public class Map {
         return emptySet;
       }
     } else {
-      return field.get(loc);
+      return field.get(0);
     }
   }
 
@@ -93,13 +92,12 @@ public class Map {
   }
 
   public JComponent eatCookie(String name) {
-    return null;
     // update locations, components, field, and cookies
     // the id for a cookie at (10, 1) is tok_x10_y1
     Location cookieLoc = locations.get(name);
     String cookieId = "tok_x" + cookieLoc.x + "_y" + cookieLoc.y;
     field.get(cookieLoc).remove(Map.Type.COOKIE);
     cookies++;
-    return components.get(cookieId);
+    return components.get(0);
   }
 }
