@@ -8,6 +8,6 @@ public class TestMapAttack extends TestCase {
   public void testMapAttack() throws FileNotFoundException {
     NoFrame frame = new NoFrame();
     Map map = frame.getMap();
-    assert(map.isGameOver());
+    assertFalse(map.isGameOver());
   }
 }
