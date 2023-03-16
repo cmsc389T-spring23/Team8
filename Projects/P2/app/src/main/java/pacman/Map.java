@@ -88,8 +88,8 @@ public class Map {
 
   public boolean attack(String Name) {
     return false; // sabotage -- remove this line!
-    this.gameOver = true;
-    return true;
+    // this.gameOver = true;
+    // return true;
   }
 
   public JComponent eatCookie(String name) {
