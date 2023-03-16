@@ -75,15 +75,15 @@ public class Map {
 
   public HashSet<Type> getLoc(Location loc) {
     // wallSet and emptySet will help you write this method
-      if (!field.containsKey(loc)){
-	  if (loc.x<0||loc.y<0||loc.x>dim||loc.y>dim){
-	      return wallSet;
-	  } else {
-	      return emptySet;
-	  }
+    if (field.containsKey(loc)){
+      if (loc.x<0||loc.y<0||loc.x>dim||loc.y>dim){
+        return wallSet;
       } else {
-	  return field.get(loc);
+        return emptySet;
       }
+    } else {
+      return field.get(loc);
+    }
   }
 
   public boolean attack(String Name) {
@@ -99,6 +99,6 @@ public class Map {
     String cookieId = "tok_x" + cookieLoc.x + "_y" + cookieLoc.y;
     field.get(cookieLoc).remove(Map.Type.COOKIE);
     cookies++;
-    return components.get(cookieId);
+    return components.get(0);
   }
 }
