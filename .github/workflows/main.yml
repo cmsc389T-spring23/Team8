@@ -18,7 +18,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Compile Java Classes
         run: |
-          ./Projects/P2/gradlew build
+	     cd ./Projects/P2
+          ./gradlew build
 
 
   mapgetloc:
@@ -31,8 +32,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Test Calculator Add
         run: |
-           ./Projects/P2/gradlew build
-           ./Projects/P2/gradlew test --tests TestGetMapLoc
+	     cd ./Projects/P2
+           ./gradlew build
+           ./gradlew test --tests TestGetMapLoc
 
   pacmanmove:
     # The type of runner that the job will run on
@@ -44,8 +46,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Test Calculator Add
         run: |
-          ./Projects/P2/gradlew build
-          ./Projects/P2/gradlew test --tests TestPacManMove
+	      cd ./Projects/P2
+          ./gradlew build
+          ./gradlew test --tests TestPacManMove
 
   ghostmove:
     # The type of runner that the job will run on
@@ -57,8 +60,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Test Calculator Add
         run: |
-          ./Projects/P2/gradlew build
-          ./Projects/P2/gradlew test --tests TestGhostMove
+	 cd ./Projects/P2
+          ./gradlew build
+          ./gradlew test --tests TestGhostMove
 
   pacmancons:
     # The type of runner that the job will run on
@@ -70,5 +74,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Test Calculator Add
         run: |
-          ./Projects/P2/gradlew build
-          ./Projects/P2/gradlew test --tests TestPacManConsume
+	 cd ./Projects/P2
+          ./gradlew build
+          ./gradlew test --tests TestPacManConsume
