@@ -76,7 +76,6 @@ jobs:
           cd ./Projects/P2
           ./gradlew build
 
-  # Rakrish's jobs
   test_ghost_in_range:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
