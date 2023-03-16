@@ -74,8 +74,10 @@ public class Map {
   }
 
   public HashSet<Type> getLoc(Location loc) {
-    // wallSet and emptySet will help you write this method
-      if (!field.containsKey(loc)){
+
+      return null; //sabotage!
+     
+      /*if (!field.containsKey(loc)){
 	  if (loc.x<0||loc.y<0||loc.x>dim||loc.y>dim){
 	      return wallSet;
 	  } else {
@@ -83,12 +85,14 @@ public class Map {
 	  }
       } else {
 	  return field.get(loc);
-      }
+	  }*/
+
   }
 
   public boolean attack(String Name) {
-    this.gameOver = true;
-    return true;
+    return false; // sabotage -- remove this line!
+    // this.gameOver = true;
+    // return true;
   }
 
   public JComponent eatCookie(String name) {
@@ -98,6 +102,6 @@ public class Map {
     String cookieId = "tok_x" + cookieLoc.x + "_y" + cookieLoc.y;
     field.get(cookieLoc).remove(Map.Type.COOKIE);
     cookies++;
-    return components.get(cookieId);
+    return components.get(0);
   }
 }
