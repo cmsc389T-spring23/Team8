@@ -22,7 +22,7 @@ jobs:
           cd ./Projects/P2
           ./gradlew build
 
-  TestMapGetLoc:
+  TestMapMove:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     container: openjdk:13
@@ -34,7 +34,7 @@ jobs:
         run: |
           cd ./Projects/P2
           ./gradlew build
-          ./gradlew test --tests TestMapGetLoc
+          ./gradlew test --tests TestMapMove
 
   TestGhostValidMoves:
     # The type of runner that the job will run on
