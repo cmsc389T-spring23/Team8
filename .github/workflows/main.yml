@@ -76,6 +76,7 @@ jobs:
         run: |
           cd ./Projects/P2
           ./gradlew build
+          ./gradlew test --tests TestMapEatCookie
 
   test_ghost_in_range:
     # The type of runner that the job will run on
