@@ -50,8 +50,9 @@ public class PacMan {
     return validSLocations;
   }
 
-  public boolean move() {
-      if (this.get_valid_moves().isEmpty()==false){
+    public boolean move(){
+      return false;//sabotage!
+      /*if (this.get_valid_moves().isEmpty()==false){
 	  boolean x = myMap.move(myName,this.get_valid_moves().get(0),Map.Type.PACMAN);
 	  if (x==false){return false;}else{ 
 	  myLoc=this.get_valid_moves().get(0);
@@ -59,7 +60,7 @@ public class PacMan {
 	   }
       } else {
 	  return false;
-      }
+	  }*/
   }
 
   public boolean is_ghost_in_range() {
@@ -83,9 +84,10 @@ public class PacMan {
   }
 
   public JComponent consume() {
-    if (myMap.getLoc(myLoc).contains(Map.Type.COOKIE))
+      return new CookieComponent(1,1,20);//sabotage!
+      /* if (myMap.getLoc(myLoc).contains(Map.Type.COOKIE))
       return myMap.eatCookie(myName);
 
-    return null;
+      return null;*/
   }
 }

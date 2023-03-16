@@ -74,16 +74,19 @@ public class Map {
   }
 
   public HashSet<Type> getLoc(Location loc) {
-    // wallSet and emptySet will help you write this method
-    if (field.containsKey(loc)){
-      if (loc.x<0||loc.y<0||loc.x>dim||loc.y>dim){
-        return wallSet;
+
+      return null; //sabotage!
+     
+      /*if (!field.containsKey(loc)){
+	  if (loc.x<0||loc.y<0||loc.x>dim||loc.y>dim){
+	      return wallSet;
+	  } else {
+	      return emptySet;
+	  }
       } else {
-        return emptySet;
-      }
-    } else {
-      return field.get(loc);
-    }
+	  return field.get(loc);
+	  }*/
+
   }
 
   public boolean attack(String Name) {
