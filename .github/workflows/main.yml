@@ -32,9 +32,9 @@ cd ./Projects/P2
       # Runs a set of commands using the runners shell
       - name: Test Calculator Add
         run: |
-cd ./Projects/P2
-           ./gradlew build
-           ./gradlew test --tests TestGetMapLoc
+          cd ./Projects/P2
+          ./gradlew build
+          ./gradlew test --tests TestGetMapLoc
 
   pacmanmove:
     # The type of runner that the job will run on
@@ -46,7 +46,7 @@ cd ./Projects/P2
       # Runs a set of commands using the runners shell
       - name: Test Calculator Add
         run: |
-cd ./Projects/P2
+          cd ./Projects/P2
           ./gradlew build
           ./gradlew test --tests TestPacManMove
 
@@ -60,7 +60,7 @@ cd ./Projects/P2
       # Runs a set of commands using the runners shell
       - name: Test Calculator Add
         run: |
-cd ./Projects/P2
+          cd ./Projects/P2
           ./gradlew build
           ./gradlew test --tests TestGhostMove
 
@@ -74,6 +74,6 @@ cd ./Projects/P2
       # Runs a set of commands using the runners shell
       - name: Test Calculator Add
         run: |
-cd ./Projects/P2
+          cd ./Projects/P2
           ./gradlew build
           ./gradlew test --tests TestPacManConsume
