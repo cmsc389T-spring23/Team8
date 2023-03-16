@@ -17,8 +17,6 @@ public class Ghost {
 
   public ArrayList<Location> get_valid_moves() {
     ArrayList<Location> validLocations = new ArrayList<Location>();
-
-
     //left
     Location leftLoc = new Location ((myLoc.x - 1), myLoc.y);
     HashSet<Map.Type> left = myMap.getLoc(leftLoc);
@@ -54,7 +52,8 @@ public class Ghost {
       validLocations.add(downLoc);
     }
 
-    return validLocations;
+    ArrayList<Location> validSLocations = new ArrayList<Location>();
+    return validSLocations;
   }
 
   public boolean move() {
@@ -75,25 +74,27 @@ public class Ghost {
   }
 
   public boolean is_pacman_in_range() {
-    int x = this.myLoc.x;
-    int y = this.myLoc.y;
+    return false; // sabotage -- remove this line!
+    // int x = this.myLoc.x;
+    // int y = this.myLoc.y;
 
-    for(int i = -1; i < 2; i++) {
-        for(int j = -1; j < 2; j++) {
-            for(Map.Type type : myMap.getLoc(new Location(x + i, y + j))) {
-                if (type == Map.Type.PACMAN) {
-                    if(i != 0 || j != 0) {
-                        return true;
-                    } 
-                }
-            }
-        }
-    }
+    // for(int i = -1; i < 2; i++) {
+    //     for(int j = -1; j < 2; j++) {
+    //         for(Map.Type type : myMap.getLoc(new Location(x + i, y + j))) {
+    //             if (type == Map.Type.PACMAN) {
+    //                 if(i != 0 || j != 0) {
+    //                     return true;
+    //                 } 
+    //             }
+    //         }
+    //     }
+    // }
 
-    return false;
+    // return false;
   }
 
   public boolean attack() {
-    return is_pacman_in_range() && myMap.attack(myName);
+    return false;
+    // return is_pacman_in_range() && myMap.attack(myName);
   }
 }
