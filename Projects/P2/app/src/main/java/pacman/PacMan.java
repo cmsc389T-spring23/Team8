@@ -52,12 +52,12 @@ public class PacMan {
   }
 
   public boolean move() {
-      if (this.get_valid_moves().size()!=0){
+      if (this.get_valid_moves().isEmpty()==false){
 	  boolean x = myMap.move(myName,this.get_valid_moves().get(0),Map.Type.PACMAN);
 	  if (x==false){return false;}else{ 
 	  myLoc=this.get_valid_moves().get(0);
 	  return true;
-	  }
+	   }
       } else {
 	  return false;
       }
@@ -69,7 +69,7 @@ public class PacMan {
 
     for(int i = -1; i < 2; i++) {
         for(int j = -1; j < 2; j++) {
-            for(Map.Type type : myMap.getLoc(new Location(x + j, y + j))) {
+            for(Map.Type type : myMap.getLoc(new Location(x + i, y + j))) {
                 if (type == Map.Type.GHOST) {
                     if(i != 0 || j != 0) {
                         return true;

@@ -17,31 +17,39 @@ public class Ghost {
 
   public ArrayList<Location> get_valid_moves() {
     ArrayList<Location> validLocations = new ArrayList<Location>();
-    
+
+
     //left
     Location leftLoc = new Location ((myLoc.x - 1), myLoc.y);
-    HashSet<Type> left = myMap.getLoc(leftLoc);
+    HashSet<Map.Type> left = myMap.getLoc(leftLoc);
+
     if(!left.contains(Map.Type.WALL)){
       validLocations.add(leftLoc);
     }
 
     //right
     Location rightLoc = new Location ((myLoc.x + 1), myLoc.y);
-    HashSet<Type> right = myMap.getLoc(rightLoc);
+
+    HashSet<Map.Type> right = myMap.getLoc(rightLoc);
+
     if(!right.contains(Map.Type.WALL)){
       validLocations.add(rightLoc);
     }
 
     //up
     Location upLoc = new Location ((myLoc.x), myLoc.y - 1);
-    HashSet<Type> up = myMap.getLoc(upLoc);
+
+    HashSet<Map.Type> up = myMap.getLoc(upLoc);
+
     if(!up.contains(Map.Type.WALL)){
       validLocations.add(upLoc);
     }
 
     //down
     Location downLoc = new Location ((myLoc.x), myLoc.y + 1);
-    HashSet<Type> down = myMap.getLoc(downLoc);
+
+    HashSet<Map.Type> down = myMap.getLoc(downLoc);
+
     if(!down.contains(Map.Type.WALL)){
       validLocations.add(downLoc);
     }
@@ -52,13 +60,13 @@ public class Ghost {
   public boolean move() {
      if (this.get_valid_moves().size()!=0){
 	  boolean x = myMap.move(myName,this.get_valid_moves().get(0),Map.Type.GHOST);
-	  if (x==false){
-	      return false;
-	  }
-	  else { 
+	  //if (x==false){
+	  //  return false;
+	  // }
+	  // else { 
 	  myLoc=this.get_valid_moves().get(0);
 	  return true;
-	  }
+	  // }
       } else {
 	  return false;
       }
@@ -70,7 +78,7 @@ public class Ghost {
 
     for(int i = -1; i < 2; i++) {
         for(int j = -1; j < 2; j++) {
-            for(Map.Type type : myMap.getLoc(new Location(x + j, y + j))) {
+            for(Map.Type type : myMap.getLoc(new Location(x + i, y + j))) {
                 if (type == Map.Type.PACMAN) {
                     if(i != 0 || j != 0) {
                         return true;
