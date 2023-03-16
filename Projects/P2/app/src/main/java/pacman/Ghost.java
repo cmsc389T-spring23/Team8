@@ -73,7 +73,7 @@ public class Ghost {
   }
 
   public boolean is_pacman_in_range() {
-    return null;
+    return false; // sabotage -- remove this line!
     int x = this.myLoc.x;
     int y = this.myLoc.y;
 
