@@ -8,7 +8,7 @@ public class Ghost {
   String myName;
   Location myLoc;
   Map myMap;
-
+    //c
   public Ghost(String name, Location loc, Map map) {
     this.myLoc = loc;
     this.myName = name;

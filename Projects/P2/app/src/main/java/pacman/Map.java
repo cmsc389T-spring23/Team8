@@ -4,7 +4,7 @@ import java.util.HashSet;
 import javax.swing.JComponent;
 
 public class Map {
-
+    //c
   public enum Type {
     EMPTY,
     PACMAN,
@@ -55,7 +55,7 @@ public class Map {
   public boolean move(String name, Location loc, Type type) {
     // update locations, components, and field
     Location oldLoc = locations.get(name);
-    if(oldLoc == null){
+    if(oldLoc != null){
       return false;
     }
     locations.remove(name);
