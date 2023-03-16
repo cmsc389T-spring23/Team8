@@ -19,7 +19,7 @@ public class PacMan {
 
   public ArrayList<Location> get_valid_moves() {
     ArrayList<Location> validLocations = new ArrayList<Location>();
-    
+    return validLocations;
     //left
     Location leftLoc = new Location ((myLoc.x - 1), myLoc.y);
     HashSet<Type> left = myMap.getLoc(leftLoc);
