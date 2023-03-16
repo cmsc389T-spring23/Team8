@@ -1,9 +1,10 @@
 # Team 8 Pacman Project cmsc389T-spring23
 
 
-Aditya Krishnamoorthy, Nicholas Perry 
+Aditya Krishnamoorthy, Nicholas Perry, Rakrish Dhakal
 
 
+![image](https://user-images.githubusercontent.com/70607267/222319965-4ec40f45-78c5-448b-a566-b03366a5d7f3.png)
 
 
 
@@ -41,10 +42,10 @@ The method takes a name, location, and type and put the object specified by the 
  
 
 ### Map.attack() - Rakrish Dhakal<br />
-This method updates the `gameOver` variable, so that wheen a ghost attacks PacMan, the game is finished.
+This method updates the `gameOver` variable, so that when a ghost attacks PacMan, the game is finished. The test checks that when we call the function, it returns true, ensuring that the game is over.
 
 ### ghost.is_pacman_in_range() - Rakrish Dhakal<br />
-This function checks for a ghost if PacMan is within a 1-unit radius of the ghost.
+This function checks for a ghost if PacMan is within a 1-unit radius of the ghost. The test adds PacMan at (9, 12) and a ghost at (9, 11) and asserts that pacman is indeed in range.
 
 ### pacman.is_ghost_in_range() - Rakrish Dhakal<br />
-This function checks for PacMan if there is a ghost within a 1-unit radius of PacMan.
+This function checks for PacMan if there is a ghost within a 1-unit radius of PacMan. The test adds PacMan at (9, 12) and a ghost at (9, 11) and asserts that the ghost is indeed in range.
