@@ -87,7 +87,7 @@ public class Map {
   }
 
   public boolean attack(String Name) {
-    return null;
+    return false; // sabotage -- remove this line!
     this.gameOver = true;
     return true;
   }
