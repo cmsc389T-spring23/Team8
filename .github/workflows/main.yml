@@ -18,7 +18,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Compile Java Classes
         run: |
-	cd ./Projects/P2
+cd ./Projects/P2
           ./gradlew build
 
 
@@ -32,7 +32,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Test Calculator Add
         run: |
-	cd ./Projects/P2
+cd ./Projects/P2
            ./gradlew build
            ./gradlew test --tests TestGetMapLoc
 
@@ -46,7 +46,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Test Calculator Add
         run: |
-	cd ./Projects/P2
+cd ./Projects/P2
           ./gradlew build
           ./gradlew test --tests TestPacManMove
 
@@ -60,7 +60,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Test Calculator Add
         run: |
-	cd ./Projects/P2
+cd ./Projects/P2
           ./gradlew build
           ./gradlew test --tests TestGhostMove
 
@@ -74,6 +74,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Test Calculator Add
         run: |
-	cd ./Projects/P2
+cd ./Projects/P2
           ./gradlew build
           ./gradlew test --tests TestPacManConsume
