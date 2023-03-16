@@ -73,6 +73,7 @@ public class Ghost {
   }
 
   public boolean is_pacman_in_range() {
+    return null;
     int x = this.myLoc.x;
     int y = this.myLoc.y;
 
@@ -92,6 +93,7 @@ public class Ghost {
   }
 
   public boolean attack() {
+    return null;
     return is_pacman_in_range() && myMap.attack(myName);
   }
 }
