@@ -6,6 +6,8 @@ import java.awt.Color;
 public class TestMapAttack extends TestCase {
 
   public void testMapAttack() throws FileNotFoundException {
-    return true;
+    NoFrame frame = new NoFrame();
+    Map map = frame.getMap();
+    assertFalse(map.isGameOver());
   }
 }
