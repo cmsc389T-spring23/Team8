@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
       # Runs a set of commands using the runners shell
       - name: Compile Java Classes
-        run: ./gradlew build
+        run: ../../Projects/P2/./gradlew build
 
   TestMapGetLoc:
     # The type of runner that the job will run on
@@ -29,8 +29,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Test Map Get Location
         run: |
-          ./gradlew build
-          ./gradlew test --tests TestMapGetLoc
+          ../../Projects/P2/./gradlew build
+          ../../Projects/P2/./gradlew test --tests TestMapGetLoc
 
   TestGhostValidMoves:
     # The type of runner that the job will run on
@@ -42,8 +42,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Test Ghost Get Valid Moves
         run: |
-          ./gradlew build
-          ./gradlew test --tests TestGhostValidMoves
+          ../../Projects/P2/./gradlew build
+          ../../Projects/P2/./gradlew test --tests TestGhostValidMoves
     
   TestPacmanValidMoves:
     # The type of runner that the job will run on
@@ -55,8 +55,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Test Pacman Get Valid Moves
         run: |
-          ./gradlew build
-          ./gradlew test --tests TestPacManValidMoves
+          ../../Projects/P2/./gradlew build
+          ../../Projects/P2/./gradlew test --tests TestPacManValidMoves
 
   TestMapEatCookie:
     # The type of runner that the job will run on
@@ -68,5 +68,5 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Test Pacman Get Valid Moves
         run: |
-          ./gradlew build
-          ./gradlew test --tests TestMapEatCookie
+          ../../Projects/P2/./gradlew build
+          ../../Projects/P2/./gradlew test --tests TestMapEatCookie
