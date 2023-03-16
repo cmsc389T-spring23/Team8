@@ -4,7 +4,7 @@ import java.util.HashSet;
 import javax.swing.JComponent;
 
 import pacman.Map.Type;
-
+//c
 public class PacMan {
   String myName;
   Location myLoc;
