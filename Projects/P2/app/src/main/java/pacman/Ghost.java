@@ -2,6 +2,8 @@ package pacman;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import pacman.Map.Type;
+
 public class Ghost {
   String myName;
   Location myLoc;
@@ -16,30 +18,38 @@ public class Ghost {
   public ArrayList<Location> get_valid_moves() {
     ArrayList<Location> validLocations = new ArrayList<Location>();
 
+
     //left
     Location leftLoc = new Location ((myLoc.x - 1), myLoc.y);
     HashSet<Map.Type> left = myMap.getLoc(leftLoc);
+
     if(!left.contains(Map.Type.WALL)){
       validLocations.add(leftLoc);
     }
 
     //right
     Location rightLoc = new Location ((myLoc.x + 1), myLoc.y);
+
     HashSet<Map.Type> right = myMap.getLoc(rightLoc);
+
     if(!right.contains(Map.Type.WALL)){
       validLocations.add(rightLoc);
     }
 
     //up
     Location upLoc = new Location ((myLoc.x), myLoc.y - 1);
+
     HashSet<Map.Type> up = myMap.getLoc(upLoc);
+
     if(!up.contains(Map.Type.WALL)){
       validLocations.add(upLoc);
     }
 
     //down
     Location downLoc = new Location ((myLoc.x), myLoc.y + 1);
+
     HashSet<Map.Type> down = myMap.getLoc(downLoc);
+
     if(!down.contains(Map.Type.WALL)){
       validLocations.add(downLoc);
     }
