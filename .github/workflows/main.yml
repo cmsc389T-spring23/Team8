@@ -18,7 +18,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Compile Java Classes
         run: |
-          echo Hello World
+          ./Projects/P2/gradlew build
 
   test_ghost_in_range:
     # The type of runner that the job will run on
@@ -31,7 +31,7 @@ jobs:
       - name: Test ghost in range
         run: |
           ./Projects/P2/gradlew build
-          ./Projects/P2/gradlew test --tests TestGhostInRange
+          ./Projects/P2/gradlew test --tests ./Projects/P2/src/test/java/pacman/TestGhostInRange
 
   test_pacman_in_range:
     # The type of runner that the job will run on
@@ -44,7 +44,7 @@ jobs:
       - name: Test pacman in range
         run: |
           ./Projects/P2/gradlew build
-          ./Projects/P2/gradlew test --tests TestPacManInRange
+          ./Projects/P2/gradlew test --tests ./Projects/P2/src/test/java/pacman/TestPacManInRange
 
   test_map_attack:
     # The type of runner that the job will run on
@@ -57,7 +57,7 @@ jobs:
       - name: Test map attack
         run: |
           ./Projects/P2/gradlew build
-          ./Projects/P2/gradlew test --tests TestMapAttack
+          ./Projects/P2/gradlew test --tests ./Projects/P2/src/test/java/pacman/TestMapAttack
 
   # TA ghost function
   test_ghost_attack:
@@ -71,4 +71,4 @@ jobs:
       - name: Test ghost attack
         run: |
           ./Projects/P2/gradlew build
-          ./Projects/P2/gradlew test --tests TestGhostAttack
+          ./Projects/P2/gradlew test --tests ./Projects/P2/src/test/java/pacman/TestGhostAttack
