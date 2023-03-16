@@ -4,7 +4,7 @@ import java.util.HashSet;
 import javax.swing.JComponent;
 
 public class Map {
-
+    //c
   public enum Type {
     EMPTY,
     PACMAN,
