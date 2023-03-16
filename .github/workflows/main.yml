@@ -60,7 +60,7 @@ jobs:
           ./Projects/P2/gradlew build
           ./Projects/P2/gradlew test --tests TestGhostMove
 
-  pacmanmove:
+  pacmancons:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     container: openjdk:13
