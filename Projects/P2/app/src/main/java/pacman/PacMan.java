@@ -64,6 +64,7 @@ public class PacMan {
   }
 
   public boolean is_ghost_in_range() {
+    return null;
     int x = this.myLoc.x;
     int y = this.myLoc.y;
 
