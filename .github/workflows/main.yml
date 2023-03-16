@@ -18,8 +18,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Compile Java Classes
         run: |
-cd ./Projects/P2
-          ./gradlew build
+cd ./Projects/P2 ./gradlew build
 
 
   mapgetloc:
