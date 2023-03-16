@@ -74,8 +74,8 @@ public class Map {
   }
 
   public HashSet<Type> getLoc(Location loc) {
-      return null;; //sabotage!
-    // wallSet and emptySet will help you write this method
+      return null; //sabotage!
+     
       /*if (!field.containsKey(loc)){
 	  if (loc.x<0||loc.y<0||loc.x>dim||loc.y>dim){
 	      return wallSet;
